@@ -17,7 +17,7 @@ $obRouter->get('/product', [
 
 $obRouter->post('/product', [
     function($request) {
-        return new Response(200, Pages\AddProduct::getPageContent());
+        return new Response(200, Pages\AddProduct::addProduct($request));
     }
 ]);
 

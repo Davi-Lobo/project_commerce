@@ -4,7 +4,6 @@ namespace App\Common;
 
 use \PDO;
 use \PDOException;
-use App\Common\Environment;
 
 class Database {
 
