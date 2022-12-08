@@ -1,19 +1,14 @@
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/includes/app.php';
 
 use \App\Http\Router;
-use \App\Utils\View;
-use \App\Common\Environment;
 
-Environment::load(__DIR__);
-
-View::init([
-    'BASE_URL' => getenv('BASE_URL')
-]);
-
+// Starts the Router
 $obRouter = new Router(getenv('BASE_URL'));
 
+// Includes all app routes
 include __DIR__.'/routes/pages.php';
 
+// Prints the route response
 $obRouter->run()->sendResponse();

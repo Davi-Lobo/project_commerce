@@ -1,5 +1,7 @@
 .env
 .DS_Store
 .composer.lock
+yarn.lock
 
+/node_modules
 /vendor

@@ -11,7 +11,7 @@ class Home extends Page {
      * Returns the view content for the home page
      * @return string
      */
-    public static function getHome() {
+    public static function getPageContent() {
         $organization = new Organization;
 
         $content =  View::render('pages/home', [

@@ -6,13 +6,19 @@ use \App\Controller\Pages;
 // Rota Home
 $obRouter->get('/', [
     function() {
-        return new Response(200, Pages\Home::getHome());
+        return new Response(200, Pages\Home::getPageContent());
     }
 ]);
 
-$obRouter->get('/sobre', [
+$obRouter->get('/product', [
     function() {
-        return new Response(200, Pages\About::getAbout());
+        return new Response(200, Pages\AddProduct::getPageContent());
+    }
+]);
+
+$obRouter->post('/product', [
+    function($request) {
+        return new Response(200, Pages\AddProduct::getPageContent());
     }
 ]);
 
