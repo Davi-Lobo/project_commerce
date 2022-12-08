@@ -9,6 +9,7 @@ class Home extends Page {
     
     /**
      * Returns the view content for the home page
+     * 
      * @return string
      */
     public static function getPageContent() {

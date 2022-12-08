@@ -6,6 +6,7 @@ class Request {
     
     /**
      * Http request method
+     * 
      * @var string
      */
     private $httpMethod;
@@ -18,18 +19,21 @@ class Request {
 
     /**
      * URL params ($_GET)
+     * 
      * @var array
      */
     private $queryParams = [];
 
     /**
      * Post variables ($_POST)
+     * 
      * @var array
      */
     private $postVars = [];
 
     /**
      * Request Headers
+     * 
      * @var array
      */
     private $headers = [];
@@ -44,6 +48,7 @@ class Request {
 
     /**
      * Returns the HTTP method of the request
+     * 
      * @return string
      */
     public function getHttpMethod() {
@@ -52,6 +57,7 @@ class Request {
 
     /**
      * Returns the URI of the request
+     * 
      * @return string
      */
     public function getUri() {
@@ -60,6 +66,7 @@ class Request {
 
     /**
      * Returns the HEADERS of the request
+     * 
      * @return array
      */
     public function getHeaders() {
@@ -68,6 +75,7 @@ class Request {
 
     /**
      * Returns the QUERY PARAMS of the request
+     * 
      * @return array
      */
     public function getQueryParams() {
@@ -76,6 +84,7 @@ class Request {
 
     /**
      * Returns the POST variables of the request
+     * 
      * @return array
      */
     public function getPostVars() {

@@ -10,18 +10,21 @@ class Router {
     
     /**
      * Project base url
+     * 
      * @var string
      */
     private $baseUrl = '';
 
     /**
      * Url prefix
+     * 
      * @var string
      */
     private $prefix = '';
 
     /**
      * Routes index
+     * 
      * @var array
      */
     private $routes = [];
@@ -163,7 +166,6 @@ class Router {
     }
 
     /**
-     *
      * @return Response
      */
     public function run() {

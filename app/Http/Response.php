@@ -6,24 +6,28 @@ class Response {
 
     /**
      * HTTP status code
+     * 
      * @var integer
      */
     private $httpCode = 200;
     
     /**
      * Response headers
+     * 
      * @var array
      */
     private $headers = [];
 
     /**
      * Returned content type
+     * 
      * @var string
      */
     private $contentType = 'text/html';
 
     /**
      * Response content
+     * 
      * @var mixed
      */
     private $content;
@@ -42,6 +46,7 @@ class Response {
 
     /**
      * Changes the content type of the response
+     * 
      * @param string $contentType
      * @return void
      */

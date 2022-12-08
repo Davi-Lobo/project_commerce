@@ -27,6 +27,7 @@ class Page {
     
     /**
      * Returns the default page content
+     * 
      * @return string
      */
     public static function getPage($title, $content) {

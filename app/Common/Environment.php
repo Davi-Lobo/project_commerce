@@ -5,7 +5,6 @@ namespace App\Common;
 class Environment {
 
     /**
-     *
      * @param string $dir
      * @return void
      */

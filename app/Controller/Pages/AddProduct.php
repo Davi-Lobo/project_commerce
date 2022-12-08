@@ -9,6 +9,7 @@ class AddProduct extends Page {
     
     /**
      * Returns the view content for the about page
+     * 
      * @return string
      */
     public static function getPageContent() {

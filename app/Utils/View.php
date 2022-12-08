@@ -5,13 +5,11 @@ namespace App\Utils;
 class View {
 
     /**
-     *
      * @var array
      */
     private static $vars = [];
 
     /**
-     *
      * @param array $vars
      * @return void
      */

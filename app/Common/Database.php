@@ -8,39 +8,44 @@ use App\Common\Environment;
 
 class Database {
 
-
     /**
      * Database host
+     * 
      * @var string
      */
     private static $host;
 
     /**
      * Database name
+     * 
      * @var string
      */
     private static $name;
 
     /**
      * Database user
+     * 
      * @var string
      */
     private static $user;
 
     /**
      * Database password
+     * 
      * @var string
      */
     private static $pass;
 
     /**
      * Database connection port
+     * 
      * @var string
      */
     private static $port;
 
     /**
      * Table name
+     * 
      * @var string
      */
     private $table;
