@@ -3,8 +3,8 @@
 namespace App\Controller\Pages;
 
 use \App\Utils\View;
-use \App\Common\Database;
 use \App\Model\Entity\Product;
+use \App\Controller\Widget\Product\ProductList;
 
 class AddProduct extends Page {
     
@@ -15,7 +15,7 @@ class AddProduct extends Page {
      */
     public static function getPageContent() {
         $content =  View::render('pages/admin/product/add', [
-      
+            'product_list' => ProductList::getWidgetContent()
         ]);
 
         return parent::getPage('Cadastrar Produto', $content);

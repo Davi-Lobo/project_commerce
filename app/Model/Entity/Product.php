@@ -5,7 +5,7 @@ namespace App\Model\Entity;
 use \App\Common\Database;
 
 class Product {
-
+    
     /**
      * @var string
      */
@@ -97,9 +97,28 @@ class Product {
             'long_description' => $this->longDescription,
             'attributes' => $this->attributes,
         ]);
+
+        return true;
     }
 
     public function getName() {
         return $this->name;
+    }
+
+    /**
+     * Returns a list of products
+     *
+     * @param string $where
+     * @param string $order
+     * @param string $limit
+     * @param string $fields
+     * @return PDOStatement
+     */
+    public static function getProducts($where = null, $order = null, $limit = null, $fields = '*') {
+        $database = new Database('catalog_products');
+
+        $results = $database->select($where, $order, $limit, $fields);
+
+        return $results;
     }
 }
