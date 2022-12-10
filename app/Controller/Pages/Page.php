@@ -3,6 +3,7 @@
 namespace App\Controller\Pages;
 
 use \App\Utils\View;
+use \App\Controller\Widget\Category\CategoryList;
 
 class Page {
 
@@ -35,6 +36,7 @@ class Page {
             'title' => $title,
             'bodyclass' => $class,
             'header' => self::getHeader(),
+            'category_list' => CategoryList::getWidgetContent(),
             'content' => $content,
             'footer' => self::getFooter()
         ]);

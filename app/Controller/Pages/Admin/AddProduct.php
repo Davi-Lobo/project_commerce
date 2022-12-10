@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Controller\Pages;
+namespace App\Controller\Pages\Admin;
 
 use \App\Utils\View;
 use \App\Model\Entity\Product;
 use \App\Controller\Widget\Product\ProductList;
 
-class AddProduct extends Page {
+class AddProduct extends \App\Controller\Pages\Page {
     
     /**
-     * Returns the view content for the about page
-     * 
+     * Returns the view content for the page
      * @return string
      */
     public static function getPageContent() {

@@ -19,7 +19,6 @@ class ProductList {
 
         $products = Product::getProducts(null,'id ASC')->fetchAll(PDO::FETCH_ASSOC);
 
-
         foreach($products as $product) {
             $list .= View::render('/product/item', [
                 'name' => $product['name'],
@@ -38,7 +37,6 @@ class ProductList {
      */
     public static function getWidgetContent() {
         $widget =  View::render('widget/product-list', [
-            'widget_name' => 'widget-products',
             'items' => self::getProductsList()
         ]);
 

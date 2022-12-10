@@ -10,4 +10,26 @@
             }
         }
     }
+
+    &.categories-list {
+        background-color: $background-color-main-menu;
+        > .list {
+            display: flex;
+            @extend .theme-grid;
+
+            > .item {
+                > .link {
+                    color: $color-text-white;
+                    display: block;
+                    font-weight: 700;
+                    text-decoration: none;
+                    padding: 10px 20px;
+
+                    &:hover {
+                        background-color: $background-color-menu-hover;
+                    }
+                }
+            }
+        }
+    }
 }
