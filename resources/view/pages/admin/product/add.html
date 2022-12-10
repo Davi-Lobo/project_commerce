@@ -38,6 +38,15 @@
         </div>
 
         <div class="field">
+            <label for="category" class="label">Categoria</label>
+            
+            <select name="category" id="category">
+                <option value="0" selected>Nenhuma</option>
+                {{category_options}}
+            </select>
+        </div>
+
+        <div class="field">
             <label for="shortDescription" class="label">Descrição curta</label>
             <input type="textarea" id="shortDescription" name="short-description"/> 
         </div>

@@ -4,6 +4,7 @@ namespace App\Controller\Pages\Admin;
 
 use \App\Utils\View;
 use \App\Model\Entity\Product;
+use \App\Model\Entity\Category;
 use \App\Controller\Widget\Product\ProductList;
 
 class AddProduct extends \App\Controller\Pages\Page {
@@ -14,7 +15,8 @@ class AddProduct extends \App\Controller\Pages\Page {
      */
     public static function getPageContent() {
         $content =  View::render('pages/admin/product/add', [
-            'product_list' => ProductList::getWidgetContent()
+            'product_list' => ProductList::getWidgetContent(),
+            'category_options' => Category::getCategoriesOptions(),
         ]);
 
         return parent::getPage('common-layout','Cadastrar Produto', $content);
@@ -34,7 +36,7 @@ class AddProduct extends \App\Controller\Pages\Page {
             $postVars['stock'],
             $postVars['price'],
             $postVars['special-price'],
-            0,
+            $postVars['category'],
             0,
             $postVars['short-description'],
             $postVars['long-description'],

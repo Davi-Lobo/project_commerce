@@ -2,6 +2,7 @@
 
 namespace App\Model\Entity;
 
+use \PDO;
 use \App\Common\Database;
 
 class Category {
@@ -44,5 +45,22 @@ class Category {
         $results = $database->select($where, $order, $limit, $fields);
 
         return $results;
+    }
+
+    /**
+     * Returns all categories as options for select fields
+     *
+     * @return string
+     */
+    public static function getCategoriesOptions() {
+        $options = '';
+
+        $items = self::getCategories(null, 'id ASC')->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($items as $item) {
+            $options .= '<option value="'.$item['id'].'">'.$item['name'].'</option>';
+        }
+
+        return $options;
     }
 }
