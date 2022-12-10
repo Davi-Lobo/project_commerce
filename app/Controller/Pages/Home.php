@@ -20,6 +20,6 @@ class Home extends Page {
             'description' => $organization->description
         ]);
 
-        return parent::getPage('Zleeb Commerce - Página Inicial', $content);
+        return parent::getPage('page-home', 'Zleeb Commerce - Página Inicial', $content);
     }
 }

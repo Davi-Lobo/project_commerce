@@ -1,0 +1,41 @@
+.page-header {
+    background-color: $background-color-header;
+
+    > .content {
+        @extend .theme-grid;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        * {
+            color: $color-text-white;
+        }
+    }
+}
+
+.links-list {
+    > .list {
+        display: flex;
+
+        > .item {
+            a {
+                text-decoration: none;
+                padding: 15px 20px;
+                font-size: 18px;
+                font-weight: 500;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// Changes header for different page layouts
+.common-layout {
+    .page-header {
+        margin-bottom: 60px;
+    }
+}

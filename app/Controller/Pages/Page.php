@@ -30,9 +30,10 @@ class Page {
      * 
      * @return string
      */
-    public static function getPage($title, $content) {
+    public static function getPage($class, $title, $content) {
         return View::render('pages/page', [
             'title' => $title,
+            'bodyclass' => $class,
             'header' => self::getHeader(),
             'content' => $content,
             'footer' => self::getFooter()

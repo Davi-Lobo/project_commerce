@@ -18,7 +18,7 @@ class AddProduct extends Page {
             'product_list' => ProductList::getWidgetContent()
         ]);
 
-        return parent::getPage('Cadastrar Produto', $content);
+        return parent::getPage('common-layout','Cadastrar Produto', $content);
     }
 
     /**

@@ -20,6 +20,6 @@ class About extends Page {
             'description' => $organization->description
         ]);
 
-        return parent::getPage('About page', $content);
+        return parent::getPage('common-layout' ,'About page', $content);
     }
 }
