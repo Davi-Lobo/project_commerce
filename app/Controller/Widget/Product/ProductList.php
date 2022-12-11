@@ -13,10 +13,14 @@ class ProductList {
      *
      * @return string
      */
-    private static function getProductsList() {
+    private static function getProductsList($where = null) {
         $list = '';
 
-        $products = Product::getProducts(null,'id ASC')->fetchAll(PDO::FETCH_ASSOC);
+        $products = Product::getProducts($where,'id ASC')->fetchAll(PDO::FETCH_ASSOC);
+
+        if(empty($products)) {
+            return 'empty';
+        }     
 
         foreach($products as $product) {
             $list .= View::render('/product/item', [
@@ -35,10 +39,16 @@ class ProductList {
      * 
      * @return string
      */
-    public static function getWidgetContent($title) {
+    public static function getWidgetContent($title, $where = null) {
+        $products = self::getProductsList($where);
+
+        if ($products == 'empty') {
+            return 'Não foi possível encontrar produtos';
+        }
+
         $widget =  View::render('widget/product-list', [
             'title' => $title,
-            'items' => self::getProductsList()
+            'items' => self::getProductsList($where)
         ]);
 
         return $widget;

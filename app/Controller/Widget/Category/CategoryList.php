@@ -17,12 +17,12 @@ class CategoryList {
     private static function getCategoriesList() {
         $list = '';
 
-        $products = Category::getCategories(null,'id ASC', '6')->fetchAll(PDO::FETCH_ASSOC);
+        $categories = Category::getCategories(null,'id ASC', '6')->fetchAll(PDO::FETCH_ASSOC);
 
-
-        foreach($products as $product) {
+        foreach($categories as $category) {
             $list .= View::render('/category/item', [
-                'category_name' => $product['name'],
+                'id' => $category['id'],
+                'category_name' => $category['name'],
             ]);
         }
     

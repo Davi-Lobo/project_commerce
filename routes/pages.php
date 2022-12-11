@@ -10,6 +10,12 @@ $obRouter->get('/', [
     }
 ]);
 
+$obRouter->get('/category/{pageId}', [
+    function($pageId) {
+        return new Response(200, Pages\Category::getPageContent($pageId));
+    }
+]);
+
 $obRouter->get('/product/{pageId}', [
     function($pageId) {
         return new Response(200, Pages\Product::getPageContent($pageId));
