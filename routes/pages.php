@@ -51,3 +51,15 @@ $obRouter->post('/admin/category/add', [
         return new Response(200, Admin\AddCategory::addCategory($request));
     }
 ]);
+
+$obRouter->get('/admin/category/edit/{categoryId}', [
+    function($categoryId) {
+        return new Response(200, Admin\EditCategory::getPageContent($categoryId));
+    }
+]);
+
+$obRouter->post('/admin/category/edit/{id}', [
+    function($request, $id) {
+        return new Response(200, Admin\EditCategory::updateCategory($request, $id));
+    }
+]);

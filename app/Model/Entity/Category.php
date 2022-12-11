@@ -30,6 +30,19 @@ class Category {
         return true;
     }
 
+     /**
+     * @return boolean
+     */
+    public static function update($id, $name) {
+        $database = new Database('catalog_categories');
+
+        $database->update('id ='.$id, [
+            'name' => $name
+        ]);
+
+        return true;
+    }
+
     /**
      * Returns a list of categories
      *

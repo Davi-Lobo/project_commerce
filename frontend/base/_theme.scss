@@ -34,3 +34,10 @@ textarea {
         border-color: $focus-color;
     }
 }
+
+.success-message {
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #95f595;
+    border-radius: 5px;
+}

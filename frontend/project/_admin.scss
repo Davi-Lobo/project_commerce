@@ -34,6 +34,17 @@
                 text-align: center;
                 border: 1px solid;
             }
+
+            .actions {
+                .link {
+                    color: #0060b1;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
     }
 }
