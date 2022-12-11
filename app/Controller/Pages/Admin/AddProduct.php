@@ -33,11 +33,11 @@ class AddProduct extends Admin {
             $postVars['code'],
             $postVars['stock'],
             $postVars['price'],
-            $postVars['special-price'],
+            $postVars['special_price'],
             $postVars['category'],
             0,
-            $postVars['short-description'],
-            $postVars['long-description'],
+            $postVars['short_description'],
+            $postVars['long_description'],
         );
 
         $product->add();

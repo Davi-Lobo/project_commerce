@@ -23,6 +23,9 @@
     }
 
     > .wrapper {
+        max-height: 500px;
+        overflow-y: auto;
+
         > .table {
             border-collapse: collapse;
             border: 1px solid;
@@ -33,6 +36,7 @@
                 padding: 10px 20px;
                 text-align: center;
                 border: 1px solid;
+                max-width: 400px;
             }
 
             .actions {

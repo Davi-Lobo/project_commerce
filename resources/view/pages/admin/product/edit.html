@@ -1,0 +1,73 @@
+<div class="page-title">
+    <h1 class="title">Editar produto: {{code}}</h1>
+</div>
+
+{{message}}
+
+<div class="form-container">
+    <form class="form" id="addProduct" method="POST">
+        <div class="field">
+            <label for="name" class="label">Nome</label>
+            <input type="text" id="name" name="name" value="{{name}}"/> 
+        </div>
+
+        <div class="field">
+            <label for="code" class="label">Código do produto</label>
+            <input type="text" id="code" name="code" value="{{code}}"/> 
+        </div>
+
+        <div class="field">
+            <label for="stock" class="label">Quantidade no estoque</label>
+            <input type="text" id="stock" name="stock" value="{{stock}}"/> 
+        </div>
+
+        <div class="field">
+            <label for="price" class="label">Preço</label>
+            <input type="text" id="price" name="price" value="{{price}}"/> 
+        </div>
+        
+        <div class="field">
+            <label for="specialPrice" class="label">Preço especial</label>
+            <input type="text" id="specialPrice" name="special_price" value="{{special_price}}"/> 
+        </div>
+
+        <div class="field">
+            <label for="category" class="label">Categoria</label>
+            
+            <select name="category_id" id="category">
+                <option value="0">Nenhuma</option>
+                {{category_options}}
+            </select>
+
+            <script type="text/javascript">
+                const selectField = document.querySelector('#category');
+                selectField.value = "{{category_id}}";
+            </script>
+        </div>
+
+        <div class="field">
+            <label for="shortDescription" class="label">Descrição curta</label>
+
+            <textarea
+                class="short"
+                type="textarea"
+                id="shortDescription"
+                name="short_description"
+            >{{short_description}}</textarea>
+        </div>
+
+        <div class="field">
+            <label for="description" class="label">Descrição longa</label>
+            <textarea 
+                class="normal"
+                type="textarea"
+                id="longDescription"
+                name="long_description"
+            >{{long_description}}</textarea>
+        </div>
+
+        <div class="actions">
+            <button class="action primary" type="submit">Atualizar</button>
+        </div>
+    </form>
+</div>

@@ -101,8 +101,15 @@ class Product {
         return true;
     }
 
-    public function getName() {
-        return $this->name;
+    /**
+     * @return boolean
+     */
+    public static function update($id, $options = []) {
+        $database = new Database('catalog_products');
+
+        $database->update('id ='.$id, $options);
+
+        return true;
     }
 
     /**

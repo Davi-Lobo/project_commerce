@@ -40,6 +40,18 @@ $obRouter->post('/admin/product/add', [
     }
 ]);
 
+$obRouter->get('/admin/product/edit/{productId}', [
+    function($productId) {
+        return new Response(200, Admin\EditProduct::getPageContent($productId));
+    }
+]);
+
+$obRouter->post('/admin/product/edit/{productId}', [
+    function($request, $productId) {
+        return new Response(200, Admin\EditProduct::updateProduct($request, $productId));
+    }
+]);
+
 $obRouter->get('/admin/category/add', [
     function() {
         return new Response(200, Admin\AddCategory::getPageContent());
@@ -58,8 +70,8 @@ $obRouter->get('/admin/category/edit/{categoryId}', [
     }
 ]);
 
-$obRouter->post('/admin/category/edit/{id}', [
-    function($request, $id) {
-        return new Response(200, Admin\EditCategory::updateCategory($request, $id));
+$obRouter->post('/admin/category/edit/{categoryId}', [
+    function($request, $categoryId) {
+        return new Response(200, Admin\EditCategory::updateCategory($request, $categoryId));
     }
 ]);
