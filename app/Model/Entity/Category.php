@@ -63,4 +63,21 @@ class Category {
 
         return $options;
     }
+
+    /**
+     * Returns a list of categories
+     *
+     * @param string $where
+     * @param string $order
+     * @param string $limit
+     * @param string $fields
+     * @return PDOStatement
+     */
+    public static function getCategoryName($where) {
+        $database = new Database('catalog_categories');
+
+        $results = $database->select($where)->fetchAll(PDO::FETCH_ASSOC)[0]['name'];
+
+        return $results;
+    }
 }

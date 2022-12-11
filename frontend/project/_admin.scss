@@ -1,0 +1,29 @@
+.page-admin {
+    .page-title {
+        margin-bottom: 60px;
+    }
+}
+
+.table-products,
+.table-categories {
+    margin-bottom: 40px;
+
+    > .title {
+        margin-bottom: 20px;
+    }
+
+    > .wrapper {
+        > .table {
+            border-collapse: collapse;
+            border: 1px solid;
+            width: 100%;
+    
+            th,
+            td {
+                padding: 10px 20px;
+                text-align: center;
+                border: 1px solid;
+            }
+        }
+    }
+}

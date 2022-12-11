@@ -10,32 +10,38 @@ $obRouter->get('/', [
     }
 ]);
 
-$obRouter->get('/product', [
+$obRouter->get('/page/{pageId}', [
+    function($pageId) {
+        return new Response(200, 'Página '. $pageId);
+    }
+]);
+
+$obRouter->get('/admin/dashboard', [
+    function() {
+        return new Response(200, Admin\Dashboard::getPageContent());
+    }
+]);
+
+$obRouter->get('/admin/product/add', [
     function() {
         return new Response(200, Admin\AddProduct::getPageContent());
     }
 ]);
 
-$obRouter->post('/product', [
+$obRouter->post('/admin/product/add', [
     function($request) {
         return new Response(200, Admin\AddProduct::addProduct($request));
     }
 ]);
 
-$obRouter->get('/category', [
+$obRouter->get('/admin/category/add', [
     function() {
         return new Response(200, Admin\AddCategory::getPageContent());
     }
 ]);
 
-$obRouter->post('/category', [
+$obRouter->post('/admin/category/add', [
     function($request) {
         return new Response(200, Admin\AddCategory::addCategory($request));
-    }
-]);
-
-$obRouter->get('/page/{pageId}', [
-    function($pageId) {
-        return new Response(200, 'Página '. $pageId);
     }
 ]);

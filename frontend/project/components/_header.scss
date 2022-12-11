@@ -11,6 +11,35 @@
         * {
             color: $color-text-white;
         }
+
+        > .logo {
+            display: block;
+            font-weight: 700;
+            font-size: 26px;
+            text-decoration: none;
+        }
+    }
+
+    &.-admin {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+
+        > .content {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            padding: 0;
+
+            > .logo {
+                padding: 20px;
+
+                &:hover {
+                    background-color: #005397;
+                }
+            }
+        }
     }
 }
 
@@ -24,9 +53,32 @@
                 padding: 15px 20px;
                 font-size: 18px;
                 font-weight: 500;
+                display: block;
 
                 &:hover {
                     text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &.-admin {
+        width: 100%;
+
+        > .list {
+            flex-direction: column;
+            align-items: center;
+
+            > .item {
+                text-align: center;
+                width: 100%;
+
+                a {
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: #005397;
+                    }
                 }
             }
         }

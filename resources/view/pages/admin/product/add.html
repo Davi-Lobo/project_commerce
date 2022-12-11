@@ -1,16 +1,8 @@
-{{product_list}}
-
-<br>
-<br>
-<hr>
-<br>
-<br>
+<div class="page-title">
+    <h1 class="title">Adicionar novo produto</h1>
+</div>
 
 <div class="form-container">
-    <div class="title">
-        <h2>Cadastrar novo produto</h2>
-    </div>
-
     <form class="form" id="addProduct" method="POST">
         <div class="field">
             <label for="name" class="label">Nome</label>
@@ -48,16 +40,16 @@
 
         <div class="field">
             <label for="shortDescription" class="label">Descrição curta</label>
-            <input type="textarea" id="shortDescription" name="short-description"/> 
+            <textarea class="short" type="textarea" id="shortDescription" name="short-description"></textarea>
         </div>
 
         <div class="field">
             <label for="description" class="label">Descrição longa</label>
-            <input type="textarea" id="description" name="long-description"/> 
+            <textarea class="normal" type="textarea" id="longDescription" name="long-description"></textarea>
         </div>
 
         <div class="actions">
-            <button class="action primary" type="submit">Enviar</button>
+            <button class="action primary" type="submit">Adicionar</button>
         </div>
     </form>
 </div>

@@ -1,3 +1,15 @@
 .page-main {
     @extend .theme-grid;
 }
+
+.page-admin {
+    display: flex;
+
+    .page-main {
+        max-width: unset;
+        flex-grow: 1;
+        padding: 20px 80px;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+}

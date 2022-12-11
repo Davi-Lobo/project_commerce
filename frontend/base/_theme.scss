@@ -3,3 +3,34 @@
     max-width: 1440px;
     padding: 0 20px;
 }
+
+input,
+select {
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 0 15px;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    padding: 10px 15px;
+    border: 2px solid #000;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+
+    &.short {
+        height: 100px;
+    }
+
+    &.normal {
+        height: 150px;
+    }
+
+    &:focus {
+        border-color: $focus-color;
+    }
+}

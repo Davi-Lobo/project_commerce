@@ -2,7 +2,9 @@
 @import 'base/global.scss';
 @import 'base/theme';
 
+@import 'project/components/components';
 @import 'project/theme';
+@import 'project/admin';
 @import 'project/components/header';
 @import 'project/product';
 @import 'project/widgets';

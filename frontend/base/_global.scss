@@ -21,3 +21,13 @@ ol {
     list-style: none;
     padding: 0;
 }
+
+button {
+    box-shadow: none;
+    border: none;
+    position: relative;
+
+    &:active {
+        top: 1px;
+    }
+}
