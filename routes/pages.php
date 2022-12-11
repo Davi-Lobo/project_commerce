@@ -10,9 +10,9 @@ $obRouter->get('/', [
     }
 ]);
 
-$obRouter->get('/page/{pageId}', [
+$obRouter->get('/product/{pageId}', [
     function($pageId) {
-        return new Response(200, 'Página '. $pageId);
+        return new Response(200, Pages\Product::getPageContent($pageId));
     }
 ]);
 

@@ -76,7 +76,7 @@ class Category {
     public static function getCategoryName($where) {
         $database = new Database('catalog_categories');
 
-        $results = $database->select($where)->fetchAll(PDO::FETCH_ASSOC)[0]['name'];
+        $results = $database->select($where)->fetch(PDO::FETCH_ASSOC)['name'];
 
         return $results;
     }

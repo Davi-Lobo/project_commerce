@@ -20,6 +20,7 @@ class ProductList {
 
         foreach($products as $product) {
             $list .= View::render('/product/item', [
+                'id' => $product['id'],
                 'name' => $product['name'],
                 'price' => number_format($product['price'], 2, ',', '.'),
                 'special_price' => number_format($product['special_price'], 2, ',', '.')
