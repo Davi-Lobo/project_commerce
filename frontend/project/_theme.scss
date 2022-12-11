@@ -12,3 +12,12 @@
         padding-bottom: 60px;
     }
 }
+
+.common-layout {
+    &.-product {
+        .page-main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

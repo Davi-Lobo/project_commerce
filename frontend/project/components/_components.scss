@@ -1,3 +1,16 @@
+.orange-button {
+    background-color: $focus-color;
+    color: $color-text-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
+
 .form-container {
     > .form {
         display: flex;
@@ -21,19 +34,12 @@
             justify-content: flex-end;
 
             > .action {
-                background-color: $focus-color;
-                color: $color-text-white;
                 font-weight: 700;
                 height: 40px;
                 width: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 font-size: 18px;
 
-                &:hover {
-                    filter: brightness(0.9);
-                }
+                @extend .orange-button;
             }
         }
     }

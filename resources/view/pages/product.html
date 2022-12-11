@@ -1,12 +1,29 @@
+<div class="product-gallery">
+    <img src="{{BASE_URL}}/public/images/product-placeholder-large.jpg" alt="" class="image">
+</div>
 
-Produto: {{name}}
-<br>
-Código: {{code}}
-<br>
-Preço: {{price}}
-<br>
-Preço Especial: {{special_price}}
-<br>
-Descrição Curta: {{short_description}}
-<br>
-Descrição Longa: {{long_description}}
+<div class="product-info">
+    <h1 class="name">{{name}}</h1>
+    <span class="code"><strong>Código: </strong>{{code}}</span>
+
+    <div class="short-description">
+        <p class="text">{{short_description}}</p>
+    </div>
+
+    <div class="prices">
+        <span class="price">R$ {{price}}</span>
+        <span class="special">R$ {{special_price}}</span>
+    </div>
+
+    <div class="actions">
+        <a class="action cart" href="{{BASE_URL}}">Adicionar ao carrinho</a>
+    </div>
+</div>
+
+<div class="product-more">
+    <div class="long-description">
+        <h2 class="title">Descrição</h2>
+
+        <p class="text">{{long_description}}</p>
+    </div>
+</div>

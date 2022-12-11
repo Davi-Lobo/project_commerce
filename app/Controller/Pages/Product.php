@@ -26,6 +26,6 @@ class Product extends Page {
             'long_description' => $product['long_description']
         ]);
 
-        return parent::getPage('common-layout', 'Produto', $content);
+        return parent::getPage('common-layout -product', 'Produto - '.$product['name'], $content);
     }
 }
