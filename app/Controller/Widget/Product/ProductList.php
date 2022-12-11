@@ -8,7 +8,6 @@ use \App\Model\Entity\Product;
 
 class ProductList {
 
-
     /**
      * Get and returns all products that should be displayed on widget
      *
@@ -35,8 +34,9 @@ class ProductList {
      * 
      * @return string
      */
-    public static function getWidgetContent() {
+    public static function getWidgetContent($title) {
         $widget =  View::render('widget/product-list', [
+            'title' => $title,
             'items' => self::getProductsList()
         ]);
 

@@ -2,6 +2,14 @@
     .page-title {
         margin-bottom: 60px;
     }
+
+    .page-main {
+        max-width: unset;
+        flex-grow: 1;
+        padding: 20px 80px;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
 }
 
 .table-products,

@@ -38,7 +38,7 @@ class Page {
             'header' => self::getHeader(),
             'category_list' => CategoryList::getWidgetContent(),
             'content' => $content,
-            'footer' => self::getFooter()
+            // 'footer' => self::getFooter()
         ]);
     }
 }

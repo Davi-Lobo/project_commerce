@@ -1,15 +1,14 @@
 .page-main {
     @extend .theme-grid;
+
+    .page-title {
+        margin-bottom: 60px;
+    }
 }
 
-.page-admin {
-    display: flex;
-
+.page-home,
+.common-layout {
     .page-main {
-        max-width: unset;
-        flex-grow: 1;
-        padding: 20px 80px;
-        max-height: 100vh;
-        overflow-y: auto;
+        padding-bottom: 60px;
     }
 }
