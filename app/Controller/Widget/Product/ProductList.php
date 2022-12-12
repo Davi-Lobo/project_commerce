@@ -43,7 +43,7 @@ class ProductList {
         $products = self::getProductsList($where);
 
         if ($products == 'empty') {
-            return 'Não foi possível encontrar produtos';
+            return 'Não há produtos cadastrados';
         }
 
         $widget =  View::render('widget/product-list', [

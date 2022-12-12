@@ -55,6 +55,14 @@ class Database {
     private $connection;
 
     /**
+     * @param string $table
+     */
+    public function __construct($table = null) {
+        $this->table = $table;
+        $this->setConnection();
+    }
+
+        /**
      * @param string $host
      * @param string $name
      * @param string $user
@@ -67,14 +75,6 @@ class Database {
         self::$user = $user;
         self::$pass = $pass;
         self::$port = $port;
-    }
-
-    /**
-     * @param string $table
-     */
-    public function __construct($table = null) {
-        $this->table = $table;
-        $this->setConnection();
     }
 
     private function setConnection() {

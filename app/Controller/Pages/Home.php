@@ -14,7 +14,7 @@ class Home extends Page {
      */
     public static function getPageContent() {
         $content =  View::render('pages/home', [
-            'products_widget' => ProductList::getWidgetContent('Veja nossos produtos'),
+            'products_widget' => ProductList::getWidgetContent('Nossos produtos'),
         ]);
 
         return parent::getPage('page-home', 'Zleeb Commerce - Página Inicial', $content);
